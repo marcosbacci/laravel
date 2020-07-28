@@ -1,7 +1,7 @@
 FROM php:7.4-fpm
 
 WORKDIR /var/www
-#COPY . /var/www
+COPY . /var/www
 
 RUN rm -rf /var/www/html
 
@@ -16,7 +16,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 #RUN chown -R www-data: /var/www
 
-RUN composer install --prefer-dist && cp .env.example .env && php artisan key:generate 
+#RUN composer install --prefer-dist && cp .env.example .env && php artisan key:generate 
 
 #RUN echo pwd: `pwd` && echo ls: `ls`
 
@@ -24,8 +24,8 @@ RUN ln -s public html
 
 #RUN chown -R www-data: .
 
-RUN usermod -u 1000 www-data
-USER www-data
+#RUN usermod -u 1000 www-data
+#USER www-data
 
 EXPOSE 9000
 
