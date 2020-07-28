@@ -15,7 +15,6 @@ services:
                         - MYSQL_DATABASE=laravel
                         - MYSQL_ROOT_PASSWORD=root
                         - MYSQL_USER=root
-                        - MYSQL_PASSWORD=root
                 networks:
                         - app-network
 
