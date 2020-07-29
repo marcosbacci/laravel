@@ -31,3 +31,19 @@ composer install
 php artisan key:generate
 php artisan migrate
 exit
+composer install
+php artisan key:generate
+cp .env.example .env
+php artisan key:generate
+exit
+composer install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate
+php artisan migrate
+php artisan migrate
+php artisan migrate
+php artisan migrate
+php artisan migrate
+php artisan migrate
+exit

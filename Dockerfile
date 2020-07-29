@@ -10,13 +10,11 @@ RUN apt-get update && apt-get install -y \
     default-mysql-client \
     zip
 
-RUN docker-php-ext-install pdo_mysql
-
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 #RUN chown -R www-data: /var/www
 
-#RUN composer install --prefer-dist && cp .env.example .env && php artisan key:generate 
+#RUN composer instal && cp .env.example .env && php artisan key:generate 
 
 #RUN echo pwd: `pwd` && echo ls: `ls`
 
