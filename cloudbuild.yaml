@@ -12,13 +12,17 @@ steps:
   name: 'gcr.io/cloud-builders/docker'
   args: ['exec', '-t', 'app', 'composer', 'install']
 
-- id: "Teste"
-  name: 'gcr.io/cloud-builders/docker'
-  args: ['exec', '-t', 'app', 'php', '/var/www/artisan', 'cache:clear']
+  #- id: "Teste"
+  #name: 'gcr.io/cloud-builders/docker'
+  #args: ['exec', '-t', 'app', 'php', '/var/www/artisan', 'cache:clear']
 
 - id: "Copiar o arquivo .env.example para .env"
   name: 'gcr.io/cloud-builders/docker'
   args: ['exec', '-t', 'app', 'cp', '.env.example', '.env']
+
+- id: "Copiar o arquivo .env.example para .env"
+  name: 'gcr.io/cloud-builders/docker'
+  args: ['exec', '-t', 'app', 'vi', '.env']
 
 - id: "Rodar um artisan key:generate"
   name: 'gcr.io/cloud-builders/docker'
