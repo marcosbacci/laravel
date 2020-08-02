@@ -20,7 +20,7 @@ steps:
   name: 'gcr.io/cloud-builders/docker'
   args: ['exec', '-t', 'app', 'cp', '.env.example', '.env']
 
-- id: "Copiar o arquivo .env.example para .env"
+- id: "Vim"
   name: 'gcr.io/cloud-builders/docker'
   args: ['exec', '-t', 'app', 'vi', '.env']
 
