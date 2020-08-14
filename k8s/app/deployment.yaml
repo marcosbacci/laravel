@@ -1,11 +1,11 @@
-apiVersion: extensions/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
         name: app
 spec:
         selector:
-                matchLabels:
-                        app: app
+               matchLabels:
+                       name: app
 
         template:
                 metadata:
@@ -28,7 +28,7 @@ spec:
 
                           envFrom:
                           - configMapRef:
-                            name: app-conf
+                                  name: app-conf
                           
                           volumeMounts:
                           - name: app-conf
